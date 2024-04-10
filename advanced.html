@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Google Search</title>
+    <style>
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .search-container {
+        text-align: center;
+        margin-top: 100px;
+      }
+      .search-input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width: 200px;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .search-button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <input
+        type="text"
+        id="input1"
+        class="search-input"
+        placeholder="Search term 1..."
+      />
+      <br />
+      <input
+        type="text"
+        id="input2"
+        class="search-input"
+        placeholder="Search term 2..."
+      />
+      <br />
+      <input
+        type="text"
+        id="input3"
+        class="search-input"
+        placeholder="Search term 3..."
+      />
+      <br />
+      <button onclick="searchGoogle()" class="search-button">
+        Google Search
+      </button>
+    </div>
+
+    <script>
+      // JavaScript function to perform search
+      function searchGoogle() {
+        var term1 = document.getElementById("input1").value;
+        var term2 = document.getElementById("input2").value;
+        var term3 = document.getElementById("input3").value;
+
+        // Concatenate search terms with '+' between them
+        var searchQuery = term1 + "+" + term2 + "+" + term3;
+
+        // Redirect to Google search page with search query
+        window.location.href =
+          "https://www.google.com/search?q=" + encodeURIComponent(searchQuery);
+      }
+    </script>
+  </body>
+
+  <footer>
+    <div class="footer-first-line">
+      <a href="index.html">HomePage</a>
+    </div>
+    <div class="footer-second-line">
+      <div class="left">
+        <a
+          href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+          >Advertising</a
+        >
+
+        <a
+          href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/"
+          >Business</a
+        >
+
+        <a href="https://www.google.com/search/howsearchworks/?fg=1"
+          >How Search works</a
+        >
+      </div>
+      <div class="right">
+        <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+        <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+</html>
